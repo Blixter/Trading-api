@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+    - "12"
+
+sudo: false
+
+git:
+    submodules: false
+
+before_script:
+    - chmod +x db/reset_test_db.bash
+    - npm install
+
+script:
+    - npm test
+
+after_success:
+    - npm run report-coveralls
+    - npm run report-codecov
