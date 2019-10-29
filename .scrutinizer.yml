@@ -1,0 +1,13 @@
+build:
+  nodes:
+    coverage:
+      tests:
+        override:
+          - js-scrutinizer-run
+          - export JWT_SECRET="averyl0ngpa$$w0rd"
+          - export PORT='1337'
+          - chmod +x db/reset_test_db.bash
+          - npm test
+            coverage:
+              file: coverage/clover.xml
+              format: clover
