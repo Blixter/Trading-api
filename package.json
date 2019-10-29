@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "pretest": "bash db/reset_test_db.bash",
-    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha test/*.js --timeout 10000 --exit"
+    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha test/*.js --exit"
   },
   "keywords": [],
   "author": "",
