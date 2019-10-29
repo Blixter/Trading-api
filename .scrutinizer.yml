@@ -4,8 +4,8 @@ build:
       tests:
         override:
           - js-scrutinizer-run
-          - export JWT_SECRET="averyl0ngpa$$w0rd"
-          - export PORT='1337'
+          - export JWT_SECRET="L0ngS3cr3tK3y!"
+          - export PORT="1337"
           - chmod +x db/reset_test_db.bash
           - npm test
             coverage:
