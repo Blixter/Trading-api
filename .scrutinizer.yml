@@ -1,6 +1,5 @@
 build:
   nodes:
-    coverage:
       tests:
         override:
           - js-scrutinizer-run
@@ -11,3 +10,4 @@ build:
             coverage:
               file: coverage/clover.xml
               format: clover
+            idle_timeout: 1800
